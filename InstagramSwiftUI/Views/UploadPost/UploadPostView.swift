@@ -12,6 +12,9 @@ struct UploadPostView: View {
     @State var postImage: Image?
     @State var captionText = ""
     @State var imagePickerPresented = false
+    @Binding var tabIndex: Int
+    @ObservedObject var viewModel = UploadPostViewModel()
+    
     
     var body: some View {
         if postImage == nil {
@@ -29,27 +32,52 @@ struct UploadPostView: View {
                 ImagePicker(image: $selectedImage)
             })
         } else if let image = postImage {
-            HStack(alignment: .top) {
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 96, height: 96)
-                    .clipped()
+            VStack {
+                HStack(alignment: .top) {
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 96, height: 96)
+                        .clipped()
+                    
+                    TextArea(placeholder: "Enter your caption..", text: $captionText)
+                        .frame(height: 200)
+                }
+                .padding()
                 
-                TextField("Enter your caption..", text: $captionText)
+                HStack {
+                    Button(action: {
+                        if let image = selectedImage {
+                            viewModel.uploadPost(caption: captionText, image: image) { _ in
+                                captionText = ""
+                                postImage = nil
+                                tabIndex = 0
+                            }
+                        }
+                    }, label: {
+                        Text("Share")
+                            .font(.system(size: 16, weight: .semibold))
+                            .frame(width: 172, height: 50)
+                            .background(Color.blue)
+                            .cornerRadius(5)
+                            .foregroundColor(.white)
+                    })
+                    
+                    Button(action: {
+                        captionText = ""
+                        postImage = nil
+                    }, label: {
+                        Text("Cancel")
+                            .font(.system(size: 16, weight: .semibold))
+                            .frame(width: 172, height: 50)
+                            .background(Color.gray)
+                            .cornerRadius(5)
+                            .foregroundColor(.white)
+                    })
+                }
+                .padding()
+                
             }
-            .padding()
-            
-            Button(action: {}, label: {
-                Text("Share")
-                    .font(.system(size: 16, weight: .semibold))
-                    .frame(width: 360, height: 50)
-                    .background(Color.blue)
-                    .cornerRadius(5)
-                    .foregroundColor(.white)
-            })
-            .padding()
-            
         }
     }
 }
@@ -61,8 +89,8 @@ extension UploadPostView {
     }
 }
 
-struct UploadPostView_Previews: PreviewProvider {
-    static var previews: some View {
-        UploadPostView()
-    }
-}
+//struct UploadPostView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UploadPostView(, tabIndex: <#Binding<Int>#>)
+//    }
+//}

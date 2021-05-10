@@ -16,6 +16,9 @@ struct RegistrationView: View {
     @State private var image: Image?
     @State var imagePickerPresented = false
     @Environment(\.presentationMode) var mode
+    
+    @EnvironmentObject var viewModel: AuthViewModel
+
 
     
     var body: some View {
@@ -68,7 +71,7 @@ struct RegistrationView: View {
                             .padding(.horizontal, 32)
                         
                         //  Username
-                        CustomSecureField(text: $fullname, placeholder: Text("Username"), imageName: "person")
+                        CustomTextField(text: $fullname, placeholder: Text("Username"), imageName: "person")
                             .padding()
                             .background(Color(.init(white: 1, alpha: 0.15)))
                             .cornerRadius(10)
@@ -76,7 +79,7 @@ struct RegistrationView: View {
                             .padding(.horizontal, 32)
                         
                         //  Fullname
-                        CustomSecureField(text: $username, placeholder: Text("Full Name"), imageName: "person")
+                        CustomTextField(text: $username, placeholder: Text("Full Name"), imageName: "person")
                             .padding()
                             .background(Color(.init(white: 1, alpha: 0.15)))
                             .cornerRadius(10)
@@ -96,8 +99,10 @@ struct RegistrationView: View {
                         })
                     }
                     
-//                    Sign in
-                    Button(action: {}, label: {
+//                    Sign up
+                    Button(action: {
+                        viewModel.register(withEmail: email, withPassword: password, image: selectedImage, fullname: fullname, username: username)
+                    }, label: {
                         Text("Sign Up")
                             .font(.headline)
                             .foregroundColor(.white)

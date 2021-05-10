@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         NavigationView {
@@ -45,7 +46,9 @@ struct LoginView: View {
                     //                    Forgot password
                     HStack {
                         Spacer()
-                        Button(action: {}, label: {
+                        NavigationLink(
+                            destination: ResetPasswordView().navigationBarHidden(true),
+                            label: {
                             Text("Forgot Password?")
                                 .font(.system(size: 13, weight: .semibold))
                                 .foregroundColor(.white)
@@ -55,7 +58,9 @@ struct LoginView: View {
                     }
                     
                     //                    Sign in
-                    Button(action: {}, label: {
+                    Button(action: {
+                        viewModel.login(withEmail: email, password: password)
+                    }, label: {
                         Text("Sign in")
                             .font(.headline)
                             .foregroundColor(.white)

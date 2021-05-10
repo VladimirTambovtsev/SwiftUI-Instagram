@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchView: View {
     @State var searchText = ""
     @State var searchMode = false
+    @ObservedObject var viewModel = SearchViewModel()
     
     var body: some View {
         ScrollView {
@@ -21,10 +22,10 @@ struct SearchView: View {
             ZStack {
                 if searchMode {
                     //  Searched users list view
-                    UserListView()
+                    UserListView(viewModel: viewModel, searchText: $searchText)
                 } else {
                     //  Photos in grid style
-                    PostGridView()
+                    PostGridView(config: .explore)
                 }
             }
         }

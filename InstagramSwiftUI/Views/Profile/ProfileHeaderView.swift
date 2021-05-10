@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileHeaderView: View {
+    @ObservedObject var viewModel: ProfileViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image("avatar1")
+                KFImage(URL(string: viewModel.user.profileImageUrl))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 80, height: 80)
@@ -21,18 +24,28 @@ struct ProfileHeaderView: View {
                 Spacer()
                 
                 HStack(spacing: 16) {
-                    UserStatView(value: 1, title: "Post")
-                    UserStatView(value: 599, title: "Followers")
-                    UserStatView(value: 499, title: "Following")
+//                    if let stats = viewModel.user.stats {
+                        UserStatView(value: viewModel.user.stats?.posts ?? 0, title: "Post")
+                        UserStatView(value: viewModel.user.stats?.followers ?? 0, title: "Followers")
+                        UserStatView(value: viewModel.user.stats?.following ?? 0, title: "Following")
+//                    }
                 }
                 .padding(.trailing, 32)
             }
             
-            Text("Firstname Lastname")
+            Text(viewModel.user.fullname)
                 .font(.system(size: 15, weight: .semibold))
                 .padding([.leading, .top])
             
-            Text("Status Text")
+            if let bio = viewModel.user.bio {
+                Text(bio)
+                    .font(.system(size: 15, weight: .semibold))
+                    .padding([.leading])
+                    .padding(.top, 1)
+            }
+            
+            
+            Text(viewModel.user.username)
                 .font(.system(size: 15))
                 .padding(.leading)
                 .padding(.top, 4)
@@ -40,7 +53,7 @@ struct ProfileHeaderView: View {
             HStack() {
                 Spacer()
 
-                ProfileActionButtonView()
+                ProfileActionButtonView(viewModel: viewModel)
                 
                 Spacer()
             }
@@ -48,9 +61,3 @@ struct ProfileHeaderView: View {
     }
 }
 
-
-struct ProfileHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileHeaderView()
-    }
-}

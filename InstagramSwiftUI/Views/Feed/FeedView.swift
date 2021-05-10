@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct FeedView: View {
+    @ObservedObject var viewModel = FeedViewModel()
+
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 32) {
-                ForEach(0 ..< 29) { _ in
-                    FeedCell()
+                ForEach(viewModel.posts, id: \.timestamp) { post in
+                    FeedCell(viewModel: FeedCellViewModel(post: post))
                 }
             }.padding(.top)
         }
