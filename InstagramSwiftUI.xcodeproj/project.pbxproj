@@ -15,6 +15,8 @@
 		E70D6A0B2644320F0015D753 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E70D6A0A2644320F0015D753 /* Kingfisher */; };
 		E70D6A0D2644329E0015D753 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E70D6A0C2644329E0015D753 /* GoogleService-Info.plist */; };
 		E70D6A0F264435AE0015D753 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70D6A0E264435AE0015D753 /* AuthViewModel.swift */; };
+		E778C0D3264C49C400EB1DC5 /* InstagramSwiftUI_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778C0D2264C49C400EB1DC5 /* InstagramSwiftUI_Tests.swift */; };
+		E778C0DB264C4AD000EB1DC5 /* UserModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778C0DA264C4AD000EB1DC5 /* UserModelTests.swift */; };
 		E77CECC6264599E700DD1627 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77CECC5264599E700DD1627 /* ImageUploader.swift */; };
 		E77CECC82645A4B100DD1627 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77CECC72645A4B100DD1627 /* Constants.swift */; };
 		E77CECCA2645A5DB00DD1627 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77CECC92645A5DB00DD1627 /* User.swift */; };
@@ -67,6 +69,16 @@
 		E7A6CD282640771700E80B21 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A6CD272640771700E80B21 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E778C0D5264C49C400EB1DC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7A6CCD926403AD200E80B21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7A6CCE026403AD200E80B21;
+			remoteInfo = InstagramSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		E70D69F42641E4020015D753 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E70D69F62641E4110015D753 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
@@ -75,6 +87,10 @@
 		E70D69FC2641E5BF0015D753 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		E70D6A0C2644329E0015D753 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E70D6A0E264435AE0015D753 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E778C0D0264C49C400EB1DC5 /* InstagramSwiftUI_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramSwiftUI_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E778C0D2264C49C400EB1DC5 /* InstagramSwiftUI_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSwiftUI_Tests.swift; sourceTree = "<group>"; };
+		E778C0D4264C49C400EB1DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E778C0DA264C4AD000EB1DC5 /* UserModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelTests.swift; sourceTree = "<group>"; };
 		E77CECC5264599E700DD1627 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		E77CECC72645A4B100DD1627 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E77CECC92645A5DB00DD1627 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -124,6 +140,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E778C0CD264C49C400EB1DC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7A6CCDE26403AD200E80B21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,10 +164,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E778C0D1264C49C400EB1DC5 /* InstagramSwiftUI_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E778C0D2264C49C400EB1DC5 /* InstagramSwiftUI_Tests.swift */,
+				E778C0D4264C49C400EB1DC5 /* Info.plist */,
+				E778C0DA264C4AD000EB1DC5 /* UserModelTests.swift */,
+			);
+			path = InstagramSwiftUI_Tests;
+			sourceTree = "<group>";
+		};
 		E7A6CCD826403AD200E80B21 = {
 			isa = PBXGroup;
 			children = (
 				E7A6CCE326403AD300E80B21 /* InstagramSwiftUI */,
+				E778C0D1264C49C400EB1DC5 /* InstagramSwiftUI_Tests */,
 				E7A6CCE226403AD300E80B21 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				E7A6CCE126403AD300E80B21 /* InstagramSwiftUI.app */,
+				E778C0D0264C49C400EB1DC5 /* InstagramSwiftUI_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -371,6 +406,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E778C0CF264C49C400EB1DC5 /* InstagramSwiftUI_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E778C0D9264C49C400EB1DC5 /* Build configuration list for PBXNativeTarget "InstagramSwiftUI_Tests" */;
+			buildPhases = (
+				E778C0CC264C49C400EB1DC5 /* Sources */,
+				E778C0CD264C49C400EB1DC5 /* Frameworks */,
+				E778C0CE264C49C400EB1DC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E778C0D6264C49C400EB1DC5 /* PBXTargetDependency */,
+			);
+			name = InstagramSwiftUI_Tests;
+			productName = InstagramSwiftUI_Tests;
+			productReference = E778C0D0264C49C400EB1DC5 /* InstagramSwiftUI_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E7A6CCE026403AD200E80B21 /* InstagramSwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7A6CCF026403AD700E80B21 /* Build configuration list for PBXNativeTarget "InstagramSwiftUI" */;
@@ -406,6 +459,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					E778C0CF264C49C400EB1DC5 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = E7A6CCE026403AD200E80B21;
+					};
 					E7A6CCE026403AD200E80B21 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -429,11 +486,19 @@
 			projectRoot = "";
 			targets = (
 				E7A6CCE026403AD200E80B21 /* InstagramSwiftUI */,
+				E778C0CF264C49C400EB1DC5 /* InstagramSwiftUI_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E778C0CE264C49C400EB1DC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7A6CCDF26403AD200E80B21 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,6 +512,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E778C0CC264C49C400EB1DC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E778C0DB264C4AD000EB1DC5 /* UserModelTests.swift in Sources */,
+				E778C0D3264C49C400EB1DC5 /* InstagramSwiftUI_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7A6CCDD26403AD200E80B21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,7 +578,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E778C0D6264C49C400EB1DC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7A6CCE026403AD200E80B21 /* InstagramSwiftUI */;
+			targetProxy = E778C0D5264C49C400EB1DC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E778C0D7264C49C400EB1DC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KKN37UUKG9;
+				INFOPLIST_FILE = InstagramSwiftUI_Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pro.tambovtsev.InstagramSwiftUI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstagramSwiftUI.app/InstagramSwiftUI";
+			};
+			name = Debug;
+		};
+		E778C0D8264C49C400EB1DC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KKN37UUKG9;
+				INFOPLIST_FILE = InstagramSwiftUI_Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pro.tambovtsev.InstagramSwiftUI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstagramSwiftUI.app/InstagramSwiftUI";
+			};
+			name = Release;
+		};
 		E7A6CCEE26403AD700E80B21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -668,6 +790,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E778C0D9264C49C400EB1DC5 /* Build configuration list for PBXNativeTarget "InstagramSwiftUI_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E778C0D7264C49C400EB1DC5 /* Debug */,
+				E778C0D8264C49C400EB1DC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E7A6CCDC26403AD200E80B21 /* Build configuration list for PBXProject "InstagramSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
